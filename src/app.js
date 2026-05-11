@@ -26,6 +26,7 @@ loginBtn.addEventListener("click", () => {
     p.className = "error-msg text-red-700 text-sm ml-2";
     p.innerText = " Incorrect email, must contain @ symbol";
     phone.insertAdjacentElement("afterend", p);
+    phone.classList.add("border-red-600");
   }
   const hasUpperCase = /[A-Z]/.test(password.value);
   const hasLowerCase = /[a-z]/.test(password.value);
@@ -39,5 +40,6 @@ loginBtn.addEventListener("click", () => {
     p.innerText =
       " Weak Password! Password must contain upeercase, lowercase, number, symbol and length of 8 character.";
     password.insertAdjacentElement("afterend", p);
+    password.classList.add("border-red-600" );
   }
 });
