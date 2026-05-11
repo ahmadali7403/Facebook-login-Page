@@ -1,12 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook Login Page</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
-    
-</body>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-white flex flex-col p-4 font-sans md:flex-row md:p-0"
+    >
+      <div class="flex-1 flex justify-center items-center md:w[51%]">
+        <img
+          class="h-18 object-cover select-none"
+          src="/images/facebook_logo.png"
+          alt="facebook logo"
+        />
+      </div>
+      <div
+        class="md:w-[49%] flex justify-center items-center md:p-12 md:border-l-gray-300 md:border-l-2"
+      >
+        <div class="flex flex-col gap-4 w-full my-4 md:justify-end">
+          <h2 class="hidden md:block p-4 text-xl font-semibold">
+            Log in to Facebook
+          </h2>
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="phone"
+              placeholder=" "
+              class="peer w-full border-2 border-gray-300 rounded-lg p-3 px-4 focus:border-gray-700 focus:outline-none focus:ring-0 select-none md:border-1 md:p-4 md:rounded-xl"
+            />
+
+            <label
+              for="phone"
+              class="absolute left-4 top-3 text-base text-black font-semibold transition-all duration-300 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-700 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:text-sm peer-[&:not(:placeholder-shown)]:text-gray-700 select-none"
+            >
+              Mobile number or email
+            </label>
+          </div>
+          <div class="relative">
+            <div class="relative w-full">
+              <input
+                type="password"
+                id="password"
+                placeholder=" "
+                class="peer w-full border-2 border-gray-300 rounded-lg p-3 px-4 focus:border-gray-700 focus:outline-none focus:ring-0 select-none md:border-1 md:p-4 md:rounded-xl"
+              />
+
+              <label
+                for="password"
+                class="absolute left-4 top-3 text-base text-black font-semibold transition-all duration-300 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-700 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:text-sm peer-[&:not(:placeholder-shown)]:text-gray-700 select-none"
+              >
+                Password
+              </label>
+            </div>
+            <i
+              id="eye-btn"
+              class="absolute right-5 top-5 fa-regular fa-eye cursor-pointer line-through"
+            ></i>
+          </div>
+          <div>
+            <button
+              id="login-btn"
+              class="w-full bg-blue-800 text-center text-white rounded-3xl py-2 hover:scale-95 hover:bg-blue-500 transition-all duration-300 cursor-pointer md:m-4"
+            >
+              Log in
+            </button>
+          </div>
+          <div
+            id="forgot-password"
+            class="w-full text-center text-black font-semibold"
+          >
+            <a class="w-full text-center text-black font-semibold" href="#"
+              >Forgot password?</a
+            >
+          </div>
+          <div
+            class="flex-1 flex justify-end items-center gap-4 flex-col mb-4 pb-4 md:hidden"
+          >
+            <button
+              id="new-account-btn"
+              class="border p-2 w-full rounded-3xl text-black font-semibold cursor-pointer border-blue-700"
+            >
+              Create new account
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex-1 flex justify-end items-center gap-4 flex-col mb-4 pb-4 md:hidden"
+      >
+        <button
+          id="new-account-btn"
+          class="border p-2 w-full rounded-3xl text-black font-semibold cursor-pointer border-blue-700"
+        >
+          Create new account
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
