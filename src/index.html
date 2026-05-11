@@ -12,20 +12,35 @@
   </head>
   <body>
     <div
-      class="min-h-screen bg-white flex flex-col p-4 font-sans md:flex-row md:p-0"
+      class="min-h-screen bg-white flex flex-col p-4 font-sans md:flex-row md:p-0 relative"
     >
-      <div class="flex-1 flex justify-center items-center md:w[51%]">
+      <div
+        class="relative flex-1 flex justify-center items-center md:w-[51%] md:flex-col md:items-start md:p-9"
+      >
         <img
-          class="h-18 object-cover select-none"
+          class="h-18 object-cover select-none z-20"
           src="/images/facebook_logo.png"
           alt="facebook logo"
         />
+
+        <img
+          class="hidden md:block h-140 object-contain bg-white relative left-22 bottom-26 z-10 mt-4"
+          src="/images/facebook_login_hero-pic.webp"
+          alt="hero pic"
+        />
+
+        <h1
+          class="hidden md:block absolute z-20 bottom-38 left-9 w-[276px] text-6xl text-black font-semibold leading-tight"
+        >
+          Explore the things
+          <span class="text-blue-500">you love</span>.
+        </h1>
       </div>
       <div
-        class="md:w-[49%] flex justify-center items-center md:p-12 md:border-l-gray-300 md:border-l-2"
+        class="md:w-[49%] flex justify-center items-center md:p-12 md:pt-26 md:border-l-gray-300 md:border-l-2"
       >
-        <div class="flex flex-col gap-4 w-full my-4 md:justify-end">
-          <h2 class="hidden md:block p-4 text-xl font-semibold">
+        <div class="flex flex-col gap-4 w-full my-4 md:justify-end md:mb-24">
+          <h2 class="hidden md:block p-4 text-xl font-semibold pl-10">
             Log in to Facebook
           </h2>
           <div class="relative w-full">
@@ -67,7 +82,7 @@
           <div>
             <button
               id="login-btn"
-              class="w-full bg-blue-800 text-center text-white rounded-3xl py-2 hover:scale-95 hover:bg-blue-500 transition-all duration-300 cursor-pointer md:m-4"
+              class="w-full bg-blue-800 text-center text-white rounded-3xl py-2 hover:scale-95 hover:bg-blue-500 transition-all duration-300 cursor-pointer md:mt-4"
             >
               Log in
             </button>
@@ -81,7 +96,7 @@
             >
           </div>
           <div
-            class="flex-1 flex justify-end items-center gap-4 flex-col mb-4 pb-4 md:hidden"
+            class="flex-1 flex justify-end items-center gap-4 flex-col mb-4 pb-4 hidden md:block md:mt-11"
           >
             <button
               id="new-account-btn"
