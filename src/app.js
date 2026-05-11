@@ -14,3 +14,30 @@ eyeBtn.addEventListener("click", () => {
     password.type = "password";
   }
 });
+
+let phone = document.querySelector("#phone");
+
+let loginBtn = document.querySelector("#login-btn");
+
+loginBtn.addEventListener("click", () => {
+  document.querySelectorAll(".error-msg").forEach((msg) => msg.remove());
+  if (!phone.value.includes("@")) {
+    let p = document.createElement("p");
+    p.className = "error-msg text-red-700 text-sm ml-2";
+    p.innerText = " Incorrect email, must contain @ symbol";
+    phone.insertAdjacentElement("afterend", p);
+  }
+  const hasUpperCase = /[A-Z]/.test(password.value);
+  const hasLowerCase = /[a-z]/.test(password.value);
+  const hasNumber = /[0-9]/.test(password.value);
+  const hasLength = password.value.length >= 8;
+  const hasSymbol = /[^A-Za-z0-9]/.test(password.value);
+  if (hasUpperCase && hasLowerCase && hasNumber && hasSymbol && hasLength) {
+  } else {
+    let p = document.createElement("p");
+    p.className = "error-msg text-red-700 text-sm ml-2";
+    p.innerText =
+      " Weak Password! Password must contain upeercase, lowercase, number, symbol and length of 8 character.";
+    password.insertAdjacentElement("afterend", p);
+  }
+});
