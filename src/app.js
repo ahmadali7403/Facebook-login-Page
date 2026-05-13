@@ -21,6 +21,8 @@ let loginBtn = document.querySelector("#login-btn");
 
 loginBtn.addEventListener("click", () => {
   document.querySelectorAll(".error-msg").forEach((msg) => msg.remove());
+  password.classList.remove("border-red-600");
+  phone.classList.remove("border-red-600")
   if (!phone.value.includes("@")) {
     let p = document.createElement("p");
     p.className = "error-msg text-red-700 text-sm ml-2";
@@ -40,6 +42,6 @@ loginBtn.addEventListener("click", () => {
     p.innerText =
       " Weak Password! Password must contain upeercase, lowercase, number, symbol and length of 8 character.";
     password.insertAdjacentElement("afterend", p);
-    password.classList.add("border-red-600" );
+    password.classList.add("border-red-600");
   }
 });
